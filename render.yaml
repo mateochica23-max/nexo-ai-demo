@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: nexo-ai-demo
+    runtime: python
+    buildCommand: echo "No external packages required"
+    startCommand: python server.py
+    healthCheckPath: /api/stats

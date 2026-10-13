@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXO AI | Asistente para negocios</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#718096;--line:#e5eaf2;--brand:#6558e8;--brand2:#8c82ff;--mint:#d9fbef;--shadow:0 10px 30px #202b4410}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:240px 1fr;min-height:100vh}.side{background:#15172a;color:#fff;padding:28px 18px;display:flex;flex-direction:column;gap:28px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:21px;letter-spacing:-.6px}.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#8b7fff,#5b50d9);display:grid;place-items:center;font-size:20px}.brand small{display:block;color:#a7abc6;font-size:11px;font-weight:500;letter-spacing:1.5px}.nav{display:grid;gap:7px}.nav button{border:0;background:transparent;color:#b8bbd0;text-align:left;padding:12px 14px;border-radius:12px;display:flex;gap:12px;align-items:center}.nav button.active,.nav button:hover{background:#2b2d48;color:white}.sidefoot{margin-top:auto;color:#a7abc6;font-size:12px;line-height:1.7}.main{padding:28px clamp(18px,4vw,48px);min-width:0}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:30px}.eyebrow{color:var(--brand);font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}.top h1{font-size:28px;letter-spacing:-.8px;margin:4px 0}.muted{color:var(--muted)}.avatar{background:#e8e5ff;color:#5447cc;border-radius:50%;width:42px;height:42px;display:grid;place-items:center;font-weight:800}.topright{display:flex;align-items:center;gap:12px}.pill{font-size:12px;background:#e7fbf1;color:#17825d;padding:7px 11px;border-radius:99px;font-weight:700}.page{display:none}.page.active{display:block}.welcome{background:linear-gradient(115deg,#25284c,#5548c7);color:white;border-radius:22px;padding:27px 30px;display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:22px;overflow:hidden}.welcome h2{font-size:23px;margin:0 0 7px}.welcome p{margin:0;color:#dedfff;max-width:560px}.welcome .spark{font-size:65px;opacity:.9}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:22px}.stat,.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}.stathead{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}.staticon{width:35px;height:35px;display:grid;place-items:center;border-radius:11px;background:#f0eeff}.num{font-size:30px;font-weight:800;letter-spacing:-1px;margin:10px 0 2px}.sub{font-size:12px;color:var(--muted)}.columns{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.panel h3{margin:0 0 4px;font-size:17px}.panelhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:17px}.activity{display:grid;gap:16px;margin-top:18px}.act{display:flex;gap:12px;align-items:flex-start}.dot{width:10px;height:10px;border-radius:50%;background:#8b80ff;margin-top:7px;flex:none}.act p{margin:0}.act small{color:var(--muted)}.quick{display:grid;gap:10px}.quick button{border:1px solid var(--line);background:white;border-radius:13px;padding:14px;text-align:left;display:flex;align-items:center;gap:12px;font-weight:700;color:var(--ink)}.quick button:hover{border-color:#a8a0ff;background:#faf9ff}.quick span{font-size:20px}.section-title{margin:0 0 5px;font-size:24px}.section-desc{margin:0 0 23px;color:var(--muted)}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}.field,select,textarea{border:1px solid #dfe4ee;background:white;border-radius:11px;padding:11px 12px;outline:none;color:var(--ink);width:100%}.field:focus,select:focus,textarea:focus{border-color:#8c82ff;box-shadow:0 0 0 3px #8c82ff22}.toolbar .field{flex:1;min-width:200px}.btn{border:0;border-radius:11px;padding:11px 15px;background:var(--brand);color:white;font-weight:750}.btn:hover{background:#5145d0}.btn.secondary{background:#eeecff;color:#5045c6}.btn.danger{background:#fff0f0;color:#bb3b4b}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:650px}th,td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line);font-size:13px}th{color:var(--muted);font-weight:650}td{vertical-align:middle}.status{border-radius:99px;padding:5px 9px;background:#f0eeff;color:#5748ca;font-size:11px;font-weight:800}.status.Cliente{background:#e4f9ef;color:#168258}.status.En-seguimiento{background:#fff4d9;color:#946b00}.empty{text-align:center;padding:35px;color:var(--muted)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.formgrid label,.generator label{font-size:12px;font-weight:750;color:#5e687a;display:grid;gap:7px}.formgrid .full{grid-column:1/-1}.actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}.generator{max-width:760px}.generator .panel{margin-bottom:18px}.generator form{display:grid;gap:15px}.result{white-space:pre-wrap;background:#f7f8fc;border:1px solid var(--line);border-radius:13px;padding:17px;min-height:130px;margin-top:15px}.toast{position:fixed;right:22px;bottom:22px;background:#20233b;color:#fff;border-radius:12px;padding:13px 18px;box-shadow:var(--shadow);display:none;z-index:20}.footer-note{font-size:12px;color:var(--muted);margin-top:22px}
+@media(max-width:1000px){.stats{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.app{grid-template-columns:200px 1fr}.side{padding:22px 12px}}
+@media(max-width:650px){.app{grid-template-columns:1fr}.side{padding:14px 16px;gap:14px}.brand{font-size:18px}.nav{grid-template-columns:repeat(4,1fr);gap:4px}.nav button{font-size:0;justify-content:center;padding:10px}.nav button span{font-size:18px}.sidefoot{display:none}.main{padding:20px 14px}.top{margin-bottom:20px}.top h1{font-size:23px}.pill{display:none}.welcome{padding:22px}.welcome .spark{font-size:42px}.stats{gap:9px}.stat{padding:14px}.num{font-size:25px}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.toolbar .field{min-width:100%}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+  <div class="brand"><div class="logo">✦</div><div>NEXO AI<small>BUSINESS ASSISTANT</small></div></div>
+  <nav class="nav" aria-label="Navegación">
+    <button class="active" data-page="home"><span>⌂</span> Inicio</button>
+    <button data-page="leads"><span>♙</span> Clientes</button>
+    <button data-page="replies"><span>✉</span> Respuestas</button>
+    <button data-page="marketing"><span>✧</span> Marketing</button>
+  </nav>
+  <div class="sidefoot">Tu negocio, más organizado.<br>Versión demo · NEXO AI<br><br>Hecho para emprendedores</div>
+</aside>
+<main class="main">
+  <header class="top"><div><div class="eyebrow">TU CENTRO DE CONTROL</div><h1 id="pageTitle">¡Hola! Bienvenido a NEXO</h1><div class="muted">Organiza tus contactos y comunica mejor con tus clientes.</div></div><div class="topright"><span class="pill">● Sistema local</span><div class="avatar">N</div></div></header>
+  <section id="home" class="page active">
+    <div class="welcome"><div><div class="eyebrow" style="color:#c8c3ff">MENOS TAREAS, MÁS CRECIMIENTO</div><h2>Haz que cada contacto cuente.</h2><p>Gestiona tus clientes y prepara mensajes para impulsar tu negocio desde un solo lugar.</p></div><div class="spark">✦</div></div>
+    <div class="stats">
+      <div class="stat"><div class="stathead">Contactos totales <span class="staticon">♙</span></div><div class="num" id="total">0</div><div class="sub">En tu lista de clientes</div></div>
+      <div class="stat"><div class="stathead">Nuevos <span class="staticon">✦</span></div><div class="num" id="new">0</div><div class="sub">Por atender</div></div>
+      <div class="stat"><div class="stathead">En seguimiento <span class="staticon">↗</span></div><div class="num" id="active">0</div><div class="sub">Conversaciones abiertas</div></div>
+      <div class="stat"><div class="stathead">Clientes <span class="staticon">✓</span></div><div class="num" id="won">0</div><div class="sub">Marcados como clientes</div></div>
+    </div>
+    <div class="columns">
+      <div class="panel"><div class="panelhead"><div><h3>Actividad reciente</h3><div class="muted">Lo que has hecho en NEXO AI</div></div></div><div class="activity" id="activity"><div class="empty">Todavía no hay actividad. ¡Empieza registrando un contacto!</div></div></div>
+      <div class="panel"><div class="panelhead"><div><h3>Accesos rápidos</h3><div class="muted">¿Qué quieres hacer hoy?</div></div></div><div class="quick"><button data-go="leads"><span>👥</span> Registrar un cliente</button><button data-go="replies"><span>💬</span> Crear una respuesta</button><button data-go="marketing"><span>📣</span> Escribir una promoción</button></div></div>
+    </div>
+    <p class="footer-note">Prototipo local. Los textos se crean mediante plantillas, no mediante un modelo de inteligencia artificial conectado.</p>
+  </section>
+  <section id="leads" class="page">
+    <h2 class="section-title">Gestión de clientes</h2><p class="section-desc">Guarda contactos y lleva un seguimiento sencillo de cada oportunidad.</p>
+    <div class="toolbar"><input class="field" id="search" placeholder="Buscar por nombre, contacto o negocio…"><button class="btn" id="newLead">＋ Nuevo contacto</button></div>
+    <div class="panel"><div class="tablewrap"><table><thead><tr><th>CONTACTO</th><th>NEGOCIO</th><th>ESTADO</th><th>REGISTRO</th><th>ACCIONES</th></tr></thead><tbody id="leadRows"><tr><td colspan="5" class="empty">Cargando contactos…</td></tr></tbody></table></div></div>
+    <div class="footer-note">Registra solo la información necesaria y evita guardar datos sensibles.</div>
+  </section>
+  <section id="replies" class="page">
+    <h2 class="section-title">Asistente de respuestas</h2><p class="section-desc">Prepara una respuesta cordial para las preguntas frecuentes de tus clientes.</p>
+    <div class="generator"><div class="panel"><form id="replyForm">
+      <label>Nombre de tu negocio<input class="field" name="business" placeholder="Ej. SmartHome Cuenca" required></label>
+      <label>¿Sobre qué consulta el cliente?<input class="field" name="product" placeholder="Ej. instalación de cámaras" required></label>
+      <label>Estilo de respuesta<select name="tone"><option value="amable">Amable y cercano</option><option value="formal">Formal y profesional</option></select></label>
+      <button class="btn" type="submit">✦ Crear respuesta</button>
+    </form><div id="replyResult" class="result" hidden></div><button id="copyReply" class="btn secondary" hidden>Copiar texto</button></div></div>
+  </section>
+  <section id="marketing" class="page">
+    <h2 class="section-title">Generador de marketing</h2><p class="section-desc">Crea una idea de publicación para redes sociales de tu emprendimiento.</p>
+    <div class="generator"><div class="panel"><form id="marketingForm">
+      <label>Nombre del negocio<input class="field" name="business" placeholder="Ej. SmartHome Cuenca" required></label>
+      <label>Producto o servicio<input class="field" name="product" placeholder="Ej. cámaras inteligentes para el hogar" required></label>
+      <label>Precio (opcional)<input class="field" name="price" placeholder="Ej. desde $25"></label>
+      <button class="btn" type="submit">✧ Crear publicación</button>
+    </form><div id="marketingResult" class="result" hidden></div><button id="copyMarketing" class="btn secondary" hidden>Copiar texto</button></div></div>
+  </section>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<dialog id="leadDialog" style="border:0;border-radius:18px;padding:25px;width:min(540px,calc(100% - 28px));box-shadow:0 20px 70px #0003">
+  <h2 style="margin:0 0 5px">Nuevo contacto</h2><p class="muted" style="margin:0 0 20px">Completa los datos básicos del contacto.</p>
+  <form id="leadForm"><div class="formgrid">
+    <label>Nombre *<input class="field" name="name" required maxlength="120" placeholder="Nombre del cliente"></label>
+    <label>Teléfono o correo<input class="field" name="contact" maxlength="180" placeholder="Contacto"></label>
+    <label>Negocio<input class="field" name="business" maxlength="120" placeholder="Empresa o negocio"></label>
+    <label>Estado<select name="status"><option>Nuevo</option><option>En seguimiento</option><option>Cliente</option></select></label>
+    <label class="full">Notas<textarea name="notes" rows="3" maxlength="1000" placeholder="Información útil (opcional)"></textarea></label>
+  </div><div class="actions"><button type="button" class="btn secondary" id="cancelLead">Cancelar</button><button class="btn" type="submit">Guardar contacto</button></div></form>
+</dialog>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let allLeads=[];
+function toast(msg){const t=$('#toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2600)}
+async function api(url,opts={}){const r=await fetch(url,{headers:{'Content-Type':'application/json'},...opts});let d={};try{d=await r.json()}catch{}if(!r.ok)throw new Error(d.error||'Ocurrió un error');return d}
+function go(page){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===page));document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));const titles={home:'¡Hola! Bienvenido a NEXO',leads:'Tus contactos, organizados',replies:'Responde con confianza',marketing:'Promociona tu negocio'};$('#pageTitle').textContent=titles[page]||'NEXO AI';if(page==='leads')loadLeads()}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+async function loadStats(){try{const d=await api('/api/stats');['total','new','active','won'].forEach(k=>$('#'+k).textContent=d[k]);$('#activity').innerHTML=d.activity.length?d.activity.map(a=>`<div class="act"><span class="dot"></span><div><p>${esc(a.action)}</p><small>${esc(a.created_at.replace('T',' '))}</small></div></div>`).join(''):'<div class="empty">Todavía no hay actividad. ¡Empieza registrando un contacto!</div>'}catch(e){toast(e.message)}}
+async function loadLeads(q=''){try{allLeads=await api('/api/leads?q='+encodeURIComponent(q));const body=$('#leadRows');if(!allLeads.length){body.innerHTML='<tr><td colspan="5" class="empty">No hay contactos. Pulsa “Nuevo contacto” para comenzar.</td></tr>';return}body.innerHTML=allLeads.map(l=>`<tr><td><strong>${esc(l.name)}</strong><br><span class="muted">${esc(l.contact||'Sin contacto')}</span></td><td>${esc(l.business||'—')}</td><td><select aria-label="Cambiar estado de ${esc(l.name)}" data-status="${l.id}" style="min-width:130px;padding:7px"><option ${l.status==='Nuevo'?'selected':''}>Nuevo</option><option ${l.status==='En seguimiento'?'selected':''}>En seguimiento</option><option ${l.status==='Cliente'?'selected':''}>Cliente</option></select></td><td>${esc((l.created_at||'').slice(0,10))}</td><td><button class="btn danger" data-delete="${l.id}">Eliminar</button></td></tr>`).join('');body.querySelectorAll('[data-status]').forEach(s=>s.addEventListener('change',async()=>{try{await api('/api/leads/'+s.dataset.status,{method:'PATCH',body:JSON.stringify({status:s.value})});toast('Estado actualizado');await loadStats()}catch(e){toast(e.message)}}));body.querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',async()=>{const l=allLeads.find(x=>x.id==b.dataset.delete);if(!confirm(`¿Eliminar el contacto ${l?.name||''}?`))return;try{await api('/api/leads/'+b.dataset.delete,{method:'DELETE'});toast('Contacto eliminado');await loadLeads($('#search').value);await loadStats()}catch(e){toast(e.message)}}))}catch(e){$('#leadRows').innerHTML=`<tr><td colspan="5" class="empty">${esc(e.message)}</td></tr>`}}
+$('#search').addEventListener('input',()=>loadLeads($('#search').value));
+$('#newLead').addEventListener('click',()=>$('#leadDialog').showModal());
+$('#cancelLead').addEventListener('click',()=>$('#leadDialog').close());
+$('#leadForm').addEventListener('submit',async e=>{e.preventDefault();const data=Object.fromEntries(new FormData(e.target));try{await api('/api/leads',{method:'POST',body:JSON.stringify(data)});e.target.reset();$('#leadDialog').close();toast('Contacto guardado');await loadLeads($('#search').value);await loadStats()}catch(err){toast(err.message)}});
+async function generate(form,kind,resultId,copyId){const fd=new FormData(form);const data=Object.fromEntries(fd);try{const d=await api('/api/generate',{method:'POST',body:JSON.stringify({...data,kind})});$(resultId).textContent=d.text;$(resultId).hidden=false;$(copyId).hidden=false;$(copyId).onclick=async()=>{try{await navigator.clipboard.writeText(d.text);toast('Texto copiado')}catch{toast('Selecciona y copia el texto manualmente')}};toast('Texto preparado');await loadStats()}catch(e){toast(e.message)}}
+$('#replyForm').addEventListener('submit',e=>{e.preventDefault();generate(e.target,'reply','#replyResult','#copyReply')});
+$('#marketingForm').addEventListener('submit',e=>{e.preventDefault();generate(e.target,'marketing','#marketingResult','#copyMarketing')});
+loadStats();
+</script>
+</body></html>
